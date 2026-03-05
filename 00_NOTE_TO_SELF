@@ -1,0 +1,9 @@
+How the hell did I manage to make this work?
+- I have no idea
+- But it works
+- And that's all that matters
+jk
+
+-> CD to src-tauri and run `cargo add clap --features derive`
+-> Use clap (derive) as you normally would inside main.rs
+-> `dex_lib::run();` is what launches the GUI and you can manually call it from main.rs if you want to test it

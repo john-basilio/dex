@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-family: "CaskaydiaCove Nerd Font", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #b4b4c4;
+  background-color: #282a36;
+  
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Side panel */
+.sidepanel {
+  width: 200px;
+  height: 100vh;
+  padding: 20px 10px;
+  background-color: #1d1d26;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.sidepanel p {
+  font-size: 0.8em;
+  margin-bottom: 20px;
+}
+
+.tab-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-btn {
+  border-radius: 8px;
+  color: #afb0c7;
+  background: none;
+  text-align: start;
+  cursor: pointer;
+  font-size: 1em;
+  border: 1px solid transparent;
+  padding: 0.3em 0.6em;
+  font-weight: 500;
+  font-family: inherit;
+
+}
+
+.tab-btn span {
+  font-size: 1.2em;
+  margin-right: 0.6em;
+}
+.tab-btn.active {
+  background-color: #282a36;
+  color: #e0e1f9;
+}
+
+/* Contents */
+.content {
+  width: 100%;
+  height: 100vh;
+  background-color: #282a36;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 0 0 6px 6px;
+  background: #fff;
+}
+
+.tab-content.active {
+  display: block;
+}
