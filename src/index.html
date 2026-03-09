@@ -3,37 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="tabs/dashboard.css" />
+    <link rel="stylesheet" href="tabs/packages.css" />
+    <link rel="stylesheet" href="tabs/services.css" />
+    <link rel="stylesheet" href="tabs/system.css" />
+    <link rel="stylesheet" href="tabs/scripts.css" />
+    <link rel="stylesheet" href="tabs/settings.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dexomplexified Execution</title>
+    <title>Decomplexified Execution</title>
     <script type="module" src="/main.js" defer></script>
   </head>
 
   <body>
-    <main class="container">
-
-      <!-- SIDE PANEL -->
-      <div class="sidepanel">
-        <div class="brand">
-          <h1> DEX</h1>
-          <p>Decomplexified Execution</p>
-        </div>
-        <div class="tab-container">
-          <button class="tab-btn active" data-tab="dashboard"><span>󱕎</span>Dashboard</button>
-          <button class="tab-btn" data-tab="about"><span></span>About</button>
-        </div>
-      </div>
-
-      <div class="content">
-        
-        <div id="dashboard" class="tab-content active">
-          <h2>Welcome dashboard</h2>
+    <main class="app">
+      <aside class="sidebar">
+        <div class="sidebar__brand">
+          <div class="sidebar__logo-ring">
+            <div class="sidebar__logo-core"></div>
+          </div>
+          <div class="sidebar__brand-text">
+            <span class="sidebar__brand-title">DEX</span>
+            <span class="sidebar__brand-subtitle">Decomplexified Execution</span>
+          </div>
         </div>
 
-          <div id="about" class="tab-content">
-          <h2>Welcome about</h2>
-        </div>
-      </div>
+        <nav class="sidebar__nav">
+          <button class="nav-item nav-item--active" data-tab="dashboard">
+            <span class="nav-item__icon">󱕎</span>
+            <span class="nav-item__label">Dashboard</span>
+          </button>
+          <button class="nav-item" data-tab="packages">
+            <span class="nav-item__icon"></span>
+            <span class="nav-item__label">Packages</span>
+          </button>
+          <button class="nav-item" data-tab="services">
+            <span class="nav-item__icon"></span>
+            <span class="nav-item__label">Services</span>
+          </button>
+          <button class="nav-item" data-tab="system">
+            <span class="nav-item__icon"></span>
+            <span class="nav-item__label">System Info</span>
+          </button>
+          <button class="nav-item" data-tab="scripts">
+            <span class="nav-item__icon"></span>
+            <span class="nav-item__label">Scripts</span>
+          </button>
+          <button class="nav-item" data-tab="settings">
+            <span class="nav-item__icon"></span>
+            <span class="nav-item__label">Settings</span>
+          </button>
+        </nav>
+      </aside>
 
+      <section class="main">
+        <header class="main-header">
+          <h1 class="main-header__title" id="main-title">Welcome to dex</h1>
+          <p class="main-header__subtitle" id="main-subtitle">A decomplexified operator CLI</p>
+        </header>
+
+        <section
+          class="tab-view tab-view--active"
+          data-tab-view="dashboard"
+          data-partial="tabs/dashboard.html"
+        ></section>
+
+        <section
+          class="tab-view"
+          data-tab-view="packages"
+          data-partial="tabs/packages.html"
+        ></section>
+
+        <section
+          class="tab-view"
+          data-tab-view="services"
+          data-partial="tabs/services.html"
+        ></section>
+
+        <section
+          class="tab-view"
+          data-tab-view="system"
+          data-partial="tabs/system.html"
+        ></section>
+
+        <section
+          class="tab-view"
+          data-tab-view="scripts"
+          data-partial="tabs/scripts.html"
+        ></section>
+
+        <section
+          class="tab-view"
+          data-tab-view="settings"
+          data-partial="tabs/settings.html"
+        ></section>
+      </section>
     </main>
   </body>
 </html>
