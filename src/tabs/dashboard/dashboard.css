@@ -34,7 +34,6 @@
   width: 54px;
   height: 54px;
   border-radius: 999px;
-  background: radial-gradient(circle at 30% 20%, #f5f7ff 0, #b9c2ff 35%, #5f6ee6 60%, #252743 100%);
   box-shadow:
     0 10px 24px rgba(0, 0, 0, 0.7),
     0 0 0 2px rgba(0, 0, 0, 0.7);

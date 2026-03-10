@@ -1,3 +1,6 @@
+const invoke = window.__TAURI__.core.invoke;
+invoke('distro')
+
 const TAB_METADATA = {
   dashboard: {
     title: "Dashboard",
@@ -26,12 +29,12 @@ const TAB_METADATA = {
 };
 
 const TAB_PARTIALS = {
-  dashboard: "tabs/dashboard.html",
-  packages: "tabs/packages.html",
-  services: "tabs/services.html",
-  system: "tabs/system.html",
-  scripts: "tabs/scripts.html",
-  settings: "tabs/settings.html",
+  dashboard: "tabs/dashboard/dashboard.html",
+  packages: "tabs/packages/packages.html",
+  services: "tabs/services/services.html",
+  system: "tabs/system/system.html",
+  scripts: "tabs/scripts/scripts.html",
+  settings: "tabs/settings/settings.html",
 };
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -50,7 +53,20 @@ window.addEventListener("DOMContentLoaded", () => {
     try {
       const res = await fetch(partialPath);
       if (!res.ok) throw new Error(`Failed to load ${partialPath}`);
-      view.innerHTML = await res.text();
+      const html = await res.text();
+      view.innerHTML = html;
+      
+      // Execute scripts in the loaded HTML
+      const scripts = view.querySelectorAll('script');
+      scripts.forEach(script => {
+        const newScript = document.createElement('script');
+        newScript.type = script.type;
+        newScript.src = script.src;
+        newScript.textContent = script.textContent;
+        view.appendChild(newScript);
+        script.remove(); // Remove original script tag
+      });
+      
       loadedTabs.add(tabName);
     } catch (_e) {
       view.innerHTML =

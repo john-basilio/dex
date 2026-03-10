@@ -1,28 +1,13 @@
-<div class="panel panel--terminal">
-  <div class="panel__header">
-    <span class="panel__title">Which package would you like to manage?</span>
-    <button class="pill-button">Recent</button>
-  </div>
-  <div class="terminal">
-    <ol class="terminal__list">
-      <li><span class="terminal__prefix">1.</span> <span class="terminal__keyword">dex</span> install neovim</li>
-      <li><span class="terminal__prefix">2.</span> <span class="terminal__keyword">dex</span> search neofetch</li>
-      <li><span class="terminal__prefix">3.</span> <span class="terminal__keyword">dex</span> remove htop</li>
-    </ol>
-  </div>
-</div>
-
 <div class="dashboard__grid">
   <div class="panel panel--distro">
     <div class="panel__header">
       <span class="panel__title">Distro Detected</span>
-      <span class="panel__chevron">▾</span>
     </div>
     <div class="distro">
-      <div class="distro__logo"></div>
+      <div class="distro__logo"> <img src="/assets/default.svg" alt="Unknown distribution"></div>
       <div class="distro__text">
-        <span class="distro__name">Void Linux</span>
-        <span class="distro__detail">Rolling · xbps</span>
+        <span class="distro__name">Unknown distribution</span>
+        <span class="distro__detail">Unknown package manager</span>
       </div>
     </div>
   </div>
@@ -64,6 +49,22 @@
   </div>
 </div>
 
+<div class="panel panel--terminal">
+  <div class="panel__header">
+    <span class="panel__title">Which package would you like to manage?</span>
+    <button class="pill-button">Recent</button>
+  </div>
+  <div class="terminal">
+    <ol class="terminal__list">
+      <li><span class="terminal__prefix">1.</span> <span class="terminal__keyword">dex</span> install neovim</li>
+      <li><span class="terminal__prefix">2.</span> <span class="terminal__keyword">dex</span> search neofetch</li>
+      <li><span class="terminal__prefix">3.</span> <span class="terminal__keyword">dex</span> remove htop</li>
+    </ol>
+  </div>
+</div>
+
+
+
 <div class="panel panel--actions">
   <div class="panel__header">
     <span class="panel__title">Quick Actions</span>
@@ -85,3 +86,4 @@
   </div>
 </div>
 
+<script type="module" src="/tabs/dashboard/dashboard.js"></script>
