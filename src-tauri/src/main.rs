@@ -5,7 +5,7 @@ use clap::{Parser, Subcommand,};
 
 #[derive(Parser)]
 #[command(name = "dex")]
-#[command(version = "0.1.0")]
+#[command(version)]
 #[command(about = "Decomplexified Execution (DEX) is a tool for managing complex workflows across major Linux distributions under one unified interface.")]
 struct Cli {
     #[command(subcommand)]

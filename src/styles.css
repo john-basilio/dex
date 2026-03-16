@@ -197,10 +197,6 @@ body {
   flex: 0 0 auto;
 }
 
-.panel--distro,
-.panel--stats {
-  height: 170px;
-}
 
 .panel--actions {
   flex: 0 0 auto;
@@ -305,5 +301,30 @@ body {
   margin-top: 8px;
 }
 
+.divider {
+  width: 3px;
+  background: #ffffff0a;
+  align-self: stretch;
+  margin: 0 5px;
+}
+
+.terminal {
+  margin-top: 4px;
+  border-radius: 12px;
+  padding: 10px 14px;
+  background: radial-gradient(circle at top left, #212536 0, #141624 55%, #10111a 100%);
+  color: #e6e9ff;
+  font-family: "JetBrains Mono", "CaskaydiaCove Nerd Font", monospace;
+  font-size: 0.82rem;
+}
+
+.terminal__prefix {
+  color: #7b7f92;
+  margin-right: 4px;
+}
+
+.terminal__keyword {
+  color: #ffcc66;
+}
 @media (max-width: 960px) {
 }
