@@ -1,6 +1,6 @@
 [package]
 name = "dex"
-version = "0.2.0-alpha.1"
+version = "v0.2.0-alpha.2"
 description = "Decomplexified Execution (DEX) is a tool for managing complex workflows across major Linux distributions under one unified interface."
 authors = ["John Rey Basilio"]
 edition = "2021"
